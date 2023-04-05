@@ -1,0 +1,288 @@
+:root {
+    --grey-120: #e2e3e7;
+    --grey-66: #c4c7cf;
+    --grey-46: #868d9a;
+    --grey-30: #696e79;
+    --grey-16: #41454c;
+    --grey-13: #35383f;
+    --grey-11: #292c31;
+    --grey-10: #232529;
+    --redBrand-46: #e3796a;
+    --redBrand-30: #d2483e;
+    --redBrand-12: #602620;
+    --blueAction-46: #84a0ef;
+    --blueAction-30: #427ae7;
+    --green-46: #5fa67d;
+    --green-30: #448460;
+    --green-16: #315841;
+    --green-12: #253e2f;
+    --green-10: #1f3428;
+    --orange-30: #ba5d38;
+    --yellow-46: #cf9a69;
+    --yellow-30: #b2722a;
+    --yellow-10: #38230b;
+    --yellow-11: #462b0d;
+    --blue-50: #84a0ef;
+    --blue-46: #78aacd;
+    --blue-30: #2a88b7;
+    --blue-12: #193c50;
+    --blue-10: #162936;
+    --red-10: #441b1b;
+    --red-12: #632425;
+    --red-30: #d55759;
+    --red-46: #e88b88;
+    --backgroundBase: var(--grey-10);
+    --backgroundAlt: var(--grey-11);
+    --backgroundAltHover: var(--grey-13);
+    --backgroundElevated1: var(--grey-13);
+    --backgroundElevated2: var(--grey-16);
+    --foregroundAlt: var(--grey-46);
+    --foregroundAction: var(--blue-50);
+    --foregroundInverted: var(--grey-120);
+    --foregroundDefault: var(--grey-120);
+    --foregroundPrimaryCTA: var(--grey-10);
+    --lessonsListBorder: var(--borderPrimary);
+    --borderImportant: var(--grey-13);
+    --borderPrimary: var(--grey-13);
+    --backgroundProgressBarValue: var(--grey-30);
+    --iframeBg: var(--grey-66);
+    --backgroundPrismLineHighlight: #44475a;
+    --prismBlockBg: #282a36;
+    --prismLineNumbersBg: var(--prismBlockBg);
+    --prismColor: #f8f8f2;
+    --backgroundCalloutAlt: #462900;
+    --backgroundTextHighlight: var(--backgroundAlt);
+    --prismTokenComment: #6272a4;
+    --prismTokenConstant: #9876aa;
+    --prismTokenPunctuation: #f8f8f2;
+    --prismTokenSymbols: #bd93f9;
+    --prismTokenSymbolsAlt: #f1fa8c;
+    --prismTokenOperator: #ff79c6;
+    --prismTokenAtRule: #ce9178;
+    --prismTokenKeywordControl: #c586c0;
+    --prismTokenFunctionAndClassname: #8be9fd;
+    --prismTokenRegex: #d16969;
+    --prismTokenClassname: #8be9fd;
+    --prismTokenVariable: #9cdcfe;
+    --prismTokenKeyword: #ff79c6;
+    --prismTokenImportant: #ff79c6;
+    --prismTokenInterpolation: #f8f8f2;
+    --prismTokenTagPunctuation: gray;
+    --prismTokenCdata: gray;
+    --prismTokenAttrvalue: #ce9178;
+    --gradientFadeOut: var(--gradientFadeOutDark);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:link,
+:visited {
+    text-decoration: none;
+}
+
+:link,
+:visited {
+    color: var(--foregroundAction);
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+body {
+    font: 14px/20px BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    color: var(--foregroundDefault);
+    background: var(--backgroundBase);
+    margin: 0;
+    height: 100%;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block
+}
+
+ul {
+    list-style: none;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+a {
+    cursor: pointer;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+ul {
+    display: block;
+    list-style: none;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+/* MAIN */
+.page__inner {
+    padding-left: 20%;
+    padding-right: 20%;
+    width: 100%;
+}
+
+@media (min-width: 1420px) {
+    .main {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: 1220px) {
+    .main {
+        line-height: 24px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1170px) {
+    .main {
+        line-height: 20px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .main {
+        line-height: 20px;
+    }
+}
+
+.main {
+    margin: auto;
+}
+
+.main .main-title {
+    font: 700 32px/40px BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    margin: 0 auto 12px;
+    padding: 0;
+}
+
+.main h1 a, .main h1 code, .main h2 a, .main h2 code, .main h3 a, .main h3 code, .main h4 a, .main h4 code {
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.main__anchor {
+    outline: 0;
+}
+
+.formatted {
+    color: var(--foregroundDefault);
+}
+
+.formatted p+ol, .formatted p+ul {
+    margin-top: 0;
+}
+
+.formatted ol, .formatted ul {
+    padding-left: 21px;
+    margin: 22px 0;
+}
+
+.formatted ol>li, .formatted ul>li {
+    margin: .3em 0;
+}
+
+.formatted code {
+    font-family: Consolas,Lucida Console,Menlo,Monaco,monospace;
+    padding: 2px 4px;
+    background: var(--prismBlockBg);
+    border-radius: 2px;
+    color: var(--foregroundAlt);
+}
+
+.important {
+    margin: 16px 0;
+    border: 3px solid var(--borderImportant);
+    border-radius: 6px;
+}
+
+.important__header {
+    margin: 0;
+    padding: 24px 24px 0;
+    border: none;
+}
+
+.important__content {
+    margin: 12px 24px 24px;
+}
+
+.important__type {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.balance {
+    position: relative;
+    margin: 16px 0;
+    border: 3px solid var(--borderPrimary);
+    border-radius: 6px;
+}
+
+.balance .balance__list {
+    padding-left: 26px;
+}

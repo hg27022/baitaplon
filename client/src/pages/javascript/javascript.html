@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="javascript.css" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <div class="page__inner">
+      <main class="main" id="main">
+        <div class="frontpage-banner">
+          <h1 class="frontpage-banner__title">The JavaScript language</h1>
+          <p class="frontpage-banner__text frontpage-banner__text_lg">
+            Here we learn JavaScript, starting from scratch and go on to
+            advanced concepts like OOP. We concentrate on the language itself
+            here, with the minimum of environment-specific notes.
+          </p>
+          <div class="frontpage-content">
+            <div class="tabs">
+              <div class="tabs__content" id="tab-1">
+                <section class="tabs__content-section">
+                  <div class="tabs__content-inner">
+                    <div class="list">
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/getting-started"
+                            >An introduction</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="./An introduction/intro.html"
+                                >An Introduction to JavaScript</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="./An introduction/intro.html"
+                                >Manuals and specifications</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="./An introduction/code-editors.html"
+                                >Code editors</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="./An introduction/devtools.html"
+                                >Developer console</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/first-steps"
+                            >JavaScript Fundamentals</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/hello-world"
+                                >Hello, world!</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/structure"
+                                >Code structure</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/strict-mode"
+                                >The modern mode, "use strict"</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/variables"
+                                >Variables</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/types"
+                                >Data types</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/alert-prompt-confirm"
+                                >Interaction: alert, prompt, confirm</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/type-conversions"
+                                >Type Conversions</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/operators"
+                                >Basic operators, maths</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/comparison"
+                                >Comparisons</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/ifelse"
+                                >Conditional branching: if, '?'</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/logical-operators"
+                                >Logical operators</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/nullish-coalescing-operator"
+                                >Nullish coalescing operator '??'</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/while-for"
+                                >Loops: while and for</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/switch"
+                                >The "switch" statement</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/function-basics"
+                                >Functions</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/function-expressions"
+                                >Function expressions</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/arrow-functions-basics"
+                                >Arrow functions, the basics</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/javascript-specials"
+                                >JavaScript specials</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/code-quality"
+                            >Code quality</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/debugging-chrome"
+                                >Debugging in the browser</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/coding-style"
+                                >Coding Style</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/comments"
+                                >Comments</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/ninja-code"
+                                >Ninja code</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/testing-mocha"
+                                >Automated testing with Mocha</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/polyfills"
+                                >Polyfills and transpilers</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/object-basics"
+                            >Objects: the basics</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/object"
+                                >Objects</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/object-copy"
+                                >Object references and copying</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/garbage-collection"
+                                >Garbage collection</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/object-methods"
+                                >Object methods, "this"</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/constructor-new"
+                                >Constructor, operator "new"</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/optional-chaining"
+                                >Optional chaining '?.'</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/symbol"
+                                >Symbol type</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/object-toprimitive"
+                                >Object to primitive conversion</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/data-types"
+                            >Data types</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/primitives-methods"
+                                >Methods of primitives</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/number"
+                                >Numbers</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/string"
+                                >Strings</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/array">Arrays</a>
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/array-methods"
+                                >Array methods</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/iterable"
+                                >Iterables</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/map-set"
+                                >Map and Set</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/weakmap-weakset"
+                                >WeakMap and WeakSet</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/keys-values-entries"
+                                >Object.keys, values, entries</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/destructuring-assignment"
+                                >Destructuring assignment</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/date"
+                                >Date and time</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/json"
+                                >JSON methods, toJSON</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/advanced-functions"
+                            >Advanced working with functions</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/recursion"
+                                >Recursion and stack</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/rest-parameters-spread"
+                                >Rest parameters and spread syntax</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/closure"
+                                >Variable scope, closure</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/var"
+                                >The old "var"</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/global-object"
+                                >Global object</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/function-object"
+                                >Function object, NFE</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/new-function"
+                                >The "new Function" syntax</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/settimeout-setinterval"
+                                >Scheduling: setTimeout and setInterval</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/call-apply-decorators"
+                                >Decorators and forwarding, call/apply</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/bind"
+                                >Function binding</a
+                              >
+                            </div>
+                          </li>
+                          <li
+                            class="list-sub__item list-sub__item_phone_hidden"
+                          >
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/arrow-functions"
+                                >Arrow functions revisited</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/object-properties"
+                            >Object properties configuration</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/property-descriptors"
+                                >Property flags and descriptors</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/property-accessors"
+                                >Property getters and setters</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/prototypes"
+                            >Prototypes, inheritance</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/prototype-inheritance"
+                                >Prototypal inheritance</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/function-prototype"
+                                >F.prototype</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/native-prototypes"
+                                >Native prototypes</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/prototype-methods"
+                                >Prototype methods, objects without __proto__</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/classes">Classes</a>
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/class"
+                                >Class basic syntax</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/class-inheritance"
+                                >Class inheritance</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/static-properties-methods"
+                                >Static properties and methods</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/private-protected-properties-methods"
+                                >Private and protected properties and methods</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/extend-natives"
+                                >Extending built-in classes</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/instanceof"
+                                >Class checking: "instanceof"</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/mixins"
+                                >Mixins</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/error-handling"
+                            >Error handling</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/try-catch"
+                                >Error handling, "try...catch"</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/custom-errors"
+                                >Custom errors, extending Error</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/async"
+                            >Promises, async/await</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/callbacks"
+                                >Introduction: callbacks</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/promise-basics"
+                                >Promise</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/promise-chaining"
+                                >Promises chaining</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/promise-error-handling"
+                                >Error handling with promises</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/promise-api"
+                                >Promise API</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/promisify"
+                                >Promisification</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/microtask-queue"
+                                >Microtasks</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/async-await"
+                                >Async/await</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/generators-iterators"
+                            >Generators, advanced iteration</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/generators"
+                                >Generators</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/async-iterators-generators"
+                                >Async iteration and generators</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/modules">Modules</a>
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/modules-intro"
+                                >Modules, introduction</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/import-export"
+                                >Export and Import</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/modules-dynamic-imports"
+                                >Dynamic imports</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="list__item">
+                        <div class="list__title">
+                          <a class="list__link" href="/js-misc"
+                            >Miscellaneous</a
+                          >
+                        </div>
+                        <ul class="list-sub">
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/proxy"
+                                >Proxy and Reflect</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/eval"
+                                >Eval: run a code string</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a
+                                class="list-sub__link"
+                                href="/currying-partials"
+                                >Currying</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/reference-type"
+                                >Reference Type</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/bigint"
+                                >BigInt</a
+                              >
+                            </div>
+                          </li>
+                          <li class="list-sub__item">
+                            <div class="list-sub__title">
+                              <a class="list-sub__link" href="/unicode"
+                                >Unicode, String internals</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

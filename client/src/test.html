@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="top-navigation-main">
+      <nav class="main-nav" aria-label="Main menu">
+        <ul class="main-menu">
+          <li class="top-level-entry-container">
+            <button
+              type="button"
+              id="references-button"
+              class="top-level-entry menu-toggle"
+              aria-controls="references-menu"
+              aria-expanded="false"
+            >
+              References</button
+            ><a href="/en-US/docs/Web" class="top-level-entry">References</a>
+            <ul
+              id="references-menu"
+              class="submenu references hidden inline-submenu-lg"
+              aria-labelledby="references-button"
+            >
+              <li class="apis-link-container mobile-only">
+                <a href="/en-US/docs/Web" class="submenu-item"
+                  ><div class="submenu-icon"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">
+                      Overview / Web Technology
+                    </div>
+                    <p class="submenu-item-description">
+                      Web technology reference for developers
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="html-link-container">
+                <a href="/en-US/docs/Web/HTML" class="submenu-item"
+                  ><div class="submenu-icon html"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">HTML</div>
+                    <p class="submenu-item-description">
+                      Structure of content on the web
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="css-link-container">
+                <a href="/en-US/docs/Web/CSS" class="submenu-item"
+                  ><div class="submenu-icon css"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">CSS</div>
+                    <p class="submenu-item-description">
+                      Code used to describe document style
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="javascript-link-container">
+                <a href="/en-US/docs/Web/JavaScript" class="submenu-item"
+                  ><div class="submenu-icon javascript"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">JavaScript</div>
+                    <p class="submenu-item-description">
+                      General-purpose scripting language
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="http-link-container">
+                <a href="/en-US/docs/Web/HTTP" class="submenu-item"
+                  ><div class="submenu-icon http"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">HTTP</div>
+                    <p class="submenu-item-description">
+                      Protocol for transmitting web resources
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="apis-link-container">
+                <a href="/en-US/docs/Web/API" class="submenu-item"
+                  ><div class="submenu-icon apis"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">Web APIs</div>
+                    <p class="submenu-item-description">
+                      Interfaces for building web applications
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="apis-link-container">
+                <a
+                  href="/en-US/docs/Mozilla/Add-ons/WebExtensions"
+                  class="submenu-item"
+                  ><div class="submenu-icon"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">Web Extensions</div>
+                    <p class="submenu-item-description">
+                      Developing extensions for web browsers
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="apis-link-container desktop-only">
+                <a href="/en-US/docs/Web" class="submenu-item"
+                  ><div class="submenu-icon"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">Web Technology</div>
+                    <p class="submenu-item-description">
+                      Web technology reference for developers
+                    </p>
+                  </div></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="top-level-entry-container">
+            <button
+              type="button"
+              id="guides-button"
+              class="top-level-entry menu-toggle"
+              aria-controls="guides-menu"
+              aria-expanded="false"
+            >
+              Guides</button
+            ><a href="/en-US/docs/Learn" class="top-level-entry">Guides</a>
+            <ul
+              id="guides-menu"
+              class="submenu guides hidden inline-submenu-lg"
+              aria-labelledby="guides-button"
+            >
+              <li class="apis-link-container mobile-only">
+                <a href="/en-US/docs/Learn" class="submenu-item"
+                  ><div class="submenu-icon learn"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">
+                      Overview / MDN Learning Area
+                    </div>
+                    <p class="submenu-item-description">
+                      Learn web development
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="apis-link-container desktop-only">
+                <a href="/en-US/docs/Learn" class="submenu-item"
+                  ><div class="submenu-icon learn"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">MDN Learning Area</div>
+                    <p class="submenu-item-description">
+                      Learn web development
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="html-link-container">
+                <a href="/en-US/docs/Learn/HTML" class="submenu-item"
+                  ><div class="submenu-icon html"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">HTML</div>
+                    <p class="submenu-item-description">
+                      Learn to structure web content with HTML
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="css-link-container">
+                <a href="/en-US/docs/Learn/CSS" class="submenu-item"
+                  ><div class="submenu-icon css"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">CSS</div>
+                    <p class="submenu-item-description">
+                      Learn to style content using CSS
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class="javascript-link-container">
+                <a href="/en-US/docs/Learn/JavaScript" class="submenu-item"
+                  ><div class="submenu-icon javascript"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">JavaScript</div>
+                    <p class="submenu-item-description">
+                      Learn to run scripts in the browser
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class=" ">
+                <a href="/en-US/docs/Web/Accessibility" class="submenu-item"
+                  ><div class="submenu-icon"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">Accessibility</div>
+                    <p class="submenu-item-description">
+                      Learn to make the web accessible to all
+                    </p>
+                  </div></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="top-level-entry-container">
+            <button
+              type="button"
+              id="mdn-plus-button"
+              class="top-level-entry menu-toggle"
+              aria-controls="mdn-plus-menu"
+              aria-expanded="false"
+            >
+              MDN Plus</button
+            ><a href="/en-US/plus" class="top-level-entry">MDN Plus</a>
+            <ul
+              id="mdn-plus-menu"
+              class="submenu mdn-plus hidden inline-submenu-lg"
+              aria-labelledby="mdn-plus-button"
+            >
+              <li class=" ">
+                <a href="/en-US/plus" class="submenu-item"
+                  ><div class="submenu-icon"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">Overview</div>
+                    <p class="submenu-item-description">
+                      A customized MDN experience
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class=" ">
+                <a href="/en-US/plus/updates" class="submenu-item"
+                  ><div class="submenu-icon"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">Updates</div>
+                    <p class="submenu-item-description">
+                      All browser compatibility updates at a glance
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="/en-US/plus/docs/features/overview"
+                  class="submenu-item"
+                  ><div class="submenu-icon"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">Documentation</div>
+                    <p class="submenu-item-description">
+                      Learn how to use MDN Plus
+                    </p>
+                  </div></a
+                >
+              </li>
+              <li class=" ">
+                <a href="/en-US/plus/docs/faq" class="submenu-item"
+                  ><div class="submenu-icon"></div>
+                  <div class="submenu-content-container">
+                    <div class="submenu-item-heading">FAQ</div>
+                    <p class="submenu-item-description">
+                      Frequently asked questions about MDN Plus
+                    </p>
+                  </div></a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <form
+          action="/en-US/search"
+          class="search-form search-widget"
+          id="top-nav-search-form"
+          role="search"
+        >
+          <label
+            id="top-nav-search-label"
+            for="top-nav-search-input"
+            class="visually-hidden"
+            >Search MDN</label
+          ><input
+            aria-activedescendant=""
+            aria-autocomplete="list"
+            aria-controls="top-nav-search-menu"
+            aria-expanded="false"
+            aria-labelledby="top-nav-search-label"
+            autocomplete="off"
+            id="top-nav-search-input"
+            role="combobox"
+            type="search"
+            class="search-input-field"
+            name="q"
+            placeholder="   "
+            required=""
+            value=""
+          /><button
+            type="button"
+            class="button action has-icon clear-search-button"
+          >
+            <span class="button-wrap"
+              ><span class="icon icon-cancel"></span
+              ><span class="visually-hidden">Clear search input</span></span
+            ></button
+          ><button type="submit" class="button action has-icon search-button">
+            <span class="button-wrap"
+              ><span class="icon icon-search"></span
+              ><span class="visually-hidden">Search</span></span
+            >
+          </button>
+          <div
+            id="top-nav-search-menu"
+            role="listbox"
+            aria-labelledby="top-nav-search-label"
+          ></div>
+        </form>
+      </div>
+      <div class="theme-switcher-menu">
+        <button
+          type="button"
+          class="button action has-icon theme-switcher-menu small"
+          aria-haspopup="menu"
+        >
+          <span class="button-wrap"
+            ><span class="icon icon-theme-os-default"></span>Theme</span
+          >
+        </button>
+      </div>
+      <ul class="auth-container">
+        <li>
+          <a
+            href="/users/fxa/login/authenticate/?next=%2Fen-US%2F"
+            class="signin-link"
+            rel="nofollow"
+            >Log in</a
+          >
+        </li>
+        <li>
+          <a class="button primary mdn-plus-subscribe-link" href="/en-US/plus"
+            ><span class="button-wrap">Get MDN Plus</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.main-document-header-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-top);
+
+  .top-navigation {
+    background-color: var(--backgroundPrimary);
+    border-bottom: 1px solid var(--borderPrimary);
+    position: relative;
+    width: 100%;
+    z-index: var(--z-index-low);
+
+    .container {
+      list-style: none;
+      align-items: center;
+      display: flex;
+      flex: 1 1;
+      flex-direction: row;
+      gap: 1rem;
+      left: inherit;
+      padding: 0;
+      position: static;
+      top: inherit;
+      z-index: inherit;
+      font-size: 1rem;
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--foregroundDefault);
+      }
+    }
+  }
+}
