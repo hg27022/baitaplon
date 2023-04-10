@@ -4,26 +4,32 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
-import initWebRoutes from './routers/web.js';
+import cookieParser from "cookie-parser";
 import viewEngine from "./config/viewEngine.js";
 import connectDB from "./config/connectDB";
+import userRoute from "./routes/userRoute.js";
+import authRoute from './routes/authRoute.js'
 
-// config app
+//  config app
 dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 viewEngine(app);
-initWebRoutes(app);
+//  router
+app.use("/v1/auth", authRoute);
+app.use("/v1/user", userRoute);
+
 connectDB();
 
 const PORT = process.env.PORT || 9000;
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+const server = app.listen(PORT, () => {
+  console.log(`App listening on port ${server.address().port}`);
 });

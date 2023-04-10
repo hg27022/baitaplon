@@ -3,7 +3,8 @@ import { Sequelize } from 'sequelize';
 // Option 3: Passing parameters separately (other dialects)
 const sequelize = new Sequelize('my-app', 'root', '', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql',
+    logging: false
 });
 
 const connectDB = async () => {
