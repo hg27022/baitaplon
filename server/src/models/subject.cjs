@@ -3,10 +3,7 @@ import {
   Model
 } from 'sequelize';
 
-import Department from './department.js';
-import Teacher from './teacher.js';
-
-export default (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   class Subject extends Model {
     /**
      * Helper method for defining associations.

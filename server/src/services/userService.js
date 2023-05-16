@@ -1,4 +1,5 @@
-import {db} from "../config/connect.js";
+// import {db} from "../config/connect.js";
+import db from "../models/index.cjs";
 import logger from "../config/winston.js";
 
 const userService = {

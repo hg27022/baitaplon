@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
-import { db } from "../config/connect.js";
-// import db from "../models/index.cjs";
+// import { db } from "../config/connect.js";
+import db from "../models/index.cjs";
 
 import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";

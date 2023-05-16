@@ -1,10 +1,10 @@
 import { Sequelize, DataTypes } from "sequelize";
 import logger from "./winston.js";
-import user from "../models/user.js";
-import teacher from "../models/teacher.js";
-import subject from '../models/subject.js';
-import classer from '../models/class.js';
-import department from '../models/department.js';
+import user from "../models/user.cjs";
+import teacher from "../models/teacher.cjs";
+import subject from "../models/subject.cjs";
+import classer from "../models/class.cjs";
+import department from "../models/department.cjs";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -57,13 +57,12 @@ const connect = async () => {
   }
 };
 
-
 const db = {
-  User: user(sequelize, Sequelize.DataTypes),
-  Teacher: teacher(sequelize, Sequelize.DataTypes),
-  Subject: subject(sequelize, Sequelize.DataTypes),
-  Class: classer(sequelize, Sequelize.DataTypes),
-  Department: department(sequelize, Sequelize.DataTypes),
+  // User: user(sequelize, Sequelize.DataTypes),
+  // Teacher: teacher(sequelize, Sequelize.DataTypes),
+  // Subject: subject(sequelize, Sequelize.DataTypes),
+  // Class: classer(sequelize, Sequelize.DataTypes),
+  // Department: department(sequelize, Sequelize.DataTypes),
 };
 
 export { connect, db };

@@ -1,13 +1,13 @@
 'use strict';
 /** @type {import('sequelize-cli').Migration} */
-export default {
+
+module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('teachers', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.STRING
+        type: Sequelize.UUID,
       },
       firstName: {
         type: Sequelize.STRING
@@ -29,13 +29,6 @@ export default {
         allowNull: false,
         type: Sequelize.DATE
       },
-      // conversationId : {
-      //   type: Sequelize.INTEGER,
-      //   references: {
-      //       model: Conversation
-      //       key: 'id'
-      //   }
-      // }
     });
   },
   async down(queryInterface, Sequelize) {
