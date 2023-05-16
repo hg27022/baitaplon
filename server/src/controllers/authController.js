@@ -1,8 +1,12 @@
 import bcrypt from "bcrypt";
-import db from "../models/index";
+import { db } from "../config/connect.js";
+// import db from "../models/index.cjs";
+
 import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";
 import { v4 as uuidv4 } from "uuid";
+import Constants from "../common/constant.js";
+import userService from "../services/userService.js";
 
 let refreshTokens = [];
 
@@ -11,12 +15,16 @@ const authController = {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        return res
+          .status(Constants.HttpStatusCode.BAD_REQUEST)
+          .json({ errors: errors.array() });
       }
       const username = req?.body?.username ?? "";
-      const user = await db.User.findOne({ where: { username: username } });
+      const user = await userService.getUserByUsername(username);
       if (user) {
-        res.status(400).json({ message: "This account has already existed" });
+        res
+          .status(Constants.HttpStatusCode.CONFLICT)
+          .json({ message: Constants.OutputType.ACCOUNT_ALREADY_EXIST });
       } else {
         const id = uuidv4();
         const salt = 10;
@@ -30,18 +38,18 @@ const authController = {
         const createUser = await db.User.create(newUser);
         if (!createUser) {
           return res
-            .status(400)
-            .send(
-              "Error in the process of creating accounts, please try again"
-            );
+            .status(Constants.HttpStatusCode.INTERNAL_SERVER_ERROR)
+            .json({ message: Constants.OutputType.ERROR_PROCESSING_CREATE });
         }
-        return res.status(200).send({
+        return res.status(Constants.HttpStatusCode.INSERT_OK).json({
           username,
-          message: "Account created successfully",
+          message: Constants.OutputType.CREATE_SUCCESS,
         });
       }
     } catch (err) {
-      res.status(500).json(err);
+      res
+        .status(Constants.HttpStatusCode.INTERNAL_SERVER_ERROR)
+        .json({ message: err });
     }
   },
 
@@ -52,7 +60,7 @@ const authController = {
         role: user.role,
       },
       process.env.JWT_ACCESS_KEY,
-      { expiresIn: "40s" }
+      { expiresIn: Constants.GenerateToken.ACCESS_EXPIRES_IN }
     );
   },
 
@@ -63,19 +71,26 @@ const authController = {
         role: user.role,
       },
       process.env.JWT_REFRESH_KEY,
-      { expiresIn: "365d" }
+      { expiresIn: Constants.GenerateToken.REFRESH_EXPIRES_IN }
     );
   },
+
   login: async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res
+        .status(Constants.HttpStatusCode.BAD_REQUEST)
+        .json({ errors: errors.array() });
     }
     const username = req?.body?.username ?? "";
-    const isUser = await db.User.findOne({ where: { username: username } });
+    const isUser = await userService.getUserByUsername(username);
+
+    const demo = db.Subject.findAll();
 
     if (!isUser) {
-      return res.status(404).json({ message: "Incorrect username" });
+      return res
+        .status(Constants.HttpStatusCode.NOT_FOUND)
+        .json({ message: Constants.OutputType.ERROR_USERNAME_OR_PASSWORD });
     }
 
     const isPassword = await bcrypt.compare(
@@ -84,7 +99,9 @@ const authController = {
     );
 
     if (!isPassword) {
-      return res.status(403).json({ message: "Incorrect password" });
+      return res
+        .status(Constants.HttpStatusCode.FORBIDDEN)
+        .json({ message: Constants.OutputType.ERROR_USERNAME_OR_PASSWORD });
     }
 
     if (isUser && isPassword) {
@@ -97,35 +114,39 @@ const authController = {
         path: "/",
         sameSite: "strict",
       });
-      return res.status(200).json({ isUser, accessToken });
+      return res
+        .status(Constants.HttpStatusCode.OK)
+        .json({ isUser, accessToken, demo });
     }
   },
 
   requestRefreshToken: async (req, res) => {
     const refreshToken = req.cookies.refreshToken;
     if (!refreshToken) {
-      return res.status(401).json("You're not authenticated");
+      return res
+        .status(Constants.HttpStatusCode.UNAUTHORIZED)
+        .json(Constants.OutputType.NOT_AUTHENTICATED);
     }
     if (!refreshTokens.includes(refreshToken)) {
-      return res.status(403).json("Refresh token is not valid");
+      return res
+        .status(Constants.HttpStatusCode.FORBIDDEN)
+        .json({ message: Constants.OutputType.ERROR_REFRESH_TOKEN_VALID });
     }
     jwt.verify(refreshToken, process.env.JWT_REFRESH_KEY, (err, user) => {
       if (err) {
-        console.log(err);
-        return req.status(400).json(err);
+        return req.status(Constants.OutputType.BAD_REQUEST).json(err);
       }
       refreshTokens = refreshTokens.filter((token) => token !== refreshToken);
       const newAccessToken = authController.generateAccessToken(user);
       const newRefreshToken = authController.generateRefreshToken(user);
       refreshTokens.push(newRefreshToken);
-      console.log(refreshTokens)
       res.cookie("refreshToken", refreshToken, {
         httpOnly: true,
         secure: false, // deploy is true
         path: "/",
         sameSite: "strict",
       });
-      res.status(200).json({
+      res.status(Constants.HttpStatusCode.OK).json({
         accessToken: newAccessToken,
       });
     });
@@ -134,7 +155,9 @@ const authController = {
   logOut: async (req, res) => {
     refreshTokens = refreshTokens.filter((token) => token !== req.body.token);
     res.clearCookie("refreshToken");
-    res.status(200).json("Logged out successfully!");
+    res
+      .status(Constants.HttpStatusCode.OK)
+      .json({ message: Constants.OutputType.LOGOUT_SUCCESS });
   },
 };
 

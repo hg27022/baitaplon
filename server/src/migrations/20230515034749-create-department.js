@@ -3,30 +3,21 @@
 
 export default {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('users', {
+    await queryInterface.createTable('departments', {
       id: {
         allowNull: false,
+        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.STRING,
-      },
-      firstName: {
         type: Sequelize.STRING
       },
-      lastName: {
+      id: {
         type: Sequelize.STRING
       },
-      email: {
+      departmentName: {
         type: Sequelize.STRING
       },
-      username: {
-        type: Sequelize.STRING,
-        unique: true
-      },
-      password: {
-        type: Sequelize.STRING,
-      },
-      role: {
-        type: Sequelize.STRING,
+      countClass: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -35,10 +26,12 @@ export default {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('users');
+    await queryInterface.dropTable('departments');
   }
 };
+
+

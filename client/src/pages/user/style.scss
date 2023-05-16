@@ -1,5 +1,20 @@
-.login-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+a {
+    color: var(--fontPrimary);
+    text-decoration: none;
+}
+
+input {
+    width: 100%;
+    caret-color: none !important;
+}
+
+.mess-notify {
+    display: none;
+    margin-top: 1rem;
+    width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: var(--fontPrimary);
+    text-align: center;
 }

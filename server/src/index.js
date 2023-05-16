@@ -6,9 +6,10 @@ import helmet from "helmet";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import viewEngine from "./config/viewEngine.js";
-import connectDB from "./config/connectDB";
+import {connect} from "./config/connect.js";
 import userRoute from "./routes/userRoute.js";
-import authRoute from './routes/authRoute.js'
+import authRoute from "./routes/authRoute.js";
+import Constant from "./common/constant.js";
 
 //  config app
 dotenv.config();
@@ -24,12 +25,12 @@ app.use(cors());
 
 viewEngine(app);
 //  router
-app.use("/v1/auth", authRoute);
-app.use("/v1/user", userRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/user", userRoute);
 
-connectDB();
+connect();
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || Constant.PORT_SECONDARY;
 const server = app.listen(PORT, () => {
   console.log(`App listening on port ${server.address().port}`);
 });
