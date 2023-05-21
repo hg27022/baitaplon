@@ -32,7 +32,6 @@ module.exports = {
         type: Sequelize.UUID
       },
       idDepartment: {
-        allowNull: false,
         type: Sequelize.UUID
       },
       createdAt: {

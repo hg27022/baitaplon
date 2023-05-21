@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Results', {
+    await queryInterface.createTable('results', {
       id: {
         allowNull: false,
         primaryKey: true,
@@ -36,6 +36,6 @@ module.exports = {
     await queryInterface.sequelize.query("ALTER TABLE results ADD CONSTRAINT FOREIGN KEY (idSubject) REFERENCES subjects(id)");
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Results');
+    await queryInterface.dropTable('results');
   }
 };

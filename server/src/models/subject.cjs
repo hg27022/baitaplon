@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     year: DataTypes.STRING,
   }, {
     sequelize,
-    modelName: 'Subject',
+    modelName: 'subject',
   });
 
   return Subject;

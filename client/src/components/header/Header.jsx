@@ -1,4 +1,3 @@
-import { Outlet, Link } from "react-router-dom";
 import "./style.scss";
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
@@ -16,7 +15,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import Sidebar from "../../components/sidebar/Sidebar";
-import dataSidebar from "../../common/constants";
+import {dataSidebar}  from "../../common/constants";
 import Button from "@mui/material/Button";
 
 const Search = styled("div")(({ theme }) => ({

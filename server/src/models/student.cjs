@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Student.init({
-    fullname: DataTypes.STRING,
-    sex: DataTypes.STRING,
+    fullName: DataTypes.STRING,
+    gender: DataTypes.STRING,
     dateOfBirth: DataTypes.DATE,
     cccd: DataTypes.STRING,
     province: DataTypes.STRING,
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     idDetailStudent: DataTypes.UUID
   }, {
     sequelize,
-    modelName: 'Student',
+    modelName: 'student',
   });
   return Student;
 };

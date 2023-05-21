@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     idDetailStudent: DataTypes.UUID
   }, {
     sequelize,
-    modelName: 'Scholarship',
+    modelName: 'scholarship',
   });
   return Scholarship;
 };

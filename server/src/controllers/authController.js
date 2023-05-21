@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
-// import { db } from "../config/connect.js";
-import db from "../models/index.cjs";
+import { db } from "../config/connect.js";
+// import db from "../models/index.cjs";
 
 import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";
@@ -35,7 +35,7 @@ const authController = {
           password: hashPassword,
           role: "user",
         };
-        const createUser = await db.User.create(newUser);
+        const createUser = await userService.createUser(newUser);
         if (!createUser) {
           return res
             .status(Constants.HttpStatusCode.INTERNAL_SERVER_ERROR)
@@ -85,8 +85,6 @@ const authController = {
     const username = req?.body?.username ?? "";
     const isUser = await userService.getUserByUsername(username);
 
-    const demo = db.Subject.findAll();
-
     if (!isUser) {
       return res
         .status(Constants.HttpStatusCode.NOT_FOUND)
@@ -116,7 +114,7 @@ const authController = {
       });
       return res
         .status(Constants.HttpStatusCode.OK)
-        .json({ isUser, accessToken, demo });
+        .json({ isUser, accessToken });
     }
   },
 

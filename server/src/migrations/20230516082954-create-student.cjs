@@ -2,17 +2,17 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Students', {
+    await queryInterface.createTable('students', {
       id: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID
       },
-      fullname: {
+      fullName: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      sex: {
+      gender: {
         type: Sequelize.STRING
       },
       dateOfBirth: {
@@ -47,6 +47,6 @@ module.exports = {
     await queryInterface.sequelize.query("ALTER TABLE students ADD CONSTRAINT FOREIGN KEY (idDetailStudent) REFERENCES detailStudents(id)");
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Students');
+    await queryInterface.dropTable('students');
   }
 };

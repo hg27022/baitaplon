@@ -5,6 +5,12 @@ import teacher from "../models/teacher.cjs";
 import subject from "../models/subject.cjs";
 import classer from "../models/class.cjs";
 import department from "../models/department.cjs";
+import detailstudent from "../models/detailstudent.cjs";
+import discipline from "../models/discipline.cjs";
+import result from "../models/result.cjs";
+import scholarship from "../models/scholarship.cjs";
+import student from "../models/student.cjs";
+
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -58,11 +64,16 @@ const connect = async () => {
 };
 
 const db = {
-  // User: user(sequelize, Sequelize.DataTypes),
-  // Teacher: teacher(sequelize, Sequelize.DataTypes),
-  // Subject: subject(sequelize, Sequelize.DataTypes),
-  // Class: classer(sequelize, Sequelize.DataTypes),
-  // Department: department(sequelize, Sequelize.DataTypes),
+  User: user(sequelize, Sequelize.DataTypes),
+  Teacher: teacher(sequelize, Sequelize.DataTypes),
+  Subject: subject(sequelize, Sequelize.DataTypes),
+  Class: classer(sequelize, Sequelize.DataTypes),
+  Department: department(sequelize, Sequelize.DataTypes),
+  Detailstudent: detailstudent(sequelize, Sequelize.DataTypes),
+  Discipline: discipline(sequelize, Sequelize.DataTypes),
+  Result: result(sequelize, Sequelize.DataTypes),
+  Scholarship: scholarship(sequelize, Sequelize.DataTypes),
+  Student: student(sequelize, Sequelize.DataTypes),
 };
 
-export { connect, db };
+export { connect, db, sequelize };

@@ -2,14 +2,15 @@ export default class Constant {
   static PORT_SECONDARY = 8080;
 
   static GenerateToken = {
-    ACCESS_EXPIRES_IN: "30m",
-    REFRESH_EXPIRES_IN: "1d",
+    ACCESS_EXPIRES_IN: "1d",
+    REFRESH_EXPIRES_IN: "10d",
   };
 
   static OutputType = {
     SUCCESS: "SUCCESS",
-    CREATE_SUCCESS: "Account created successfully",
-    DELETE_SUCCESS: "delete successfully",
+    CREATE_SUCCESS: "Created successfully",
+    UPDATE_SUCCESS: "Update successfully",
+    DELETE_SUCCESS: "Delete successfully",
     LOGOUT_SUCCESS: "Logout successfully",
 
     WARNING: "WARNING",
@@ -17,11 +18,10 @@ export default class Constant {
 
     ERROR: "ERROR",
     ERROR_USERNAME_OR_PASSWORD: "Incorrect username or password",
-    ERROR_PROCESSING_CREATE:
-      "Error in the process of creating, please try again",
-    ERROR_PROCESSING_DELETE:
-      "Error in the process of delete, please try again",
+    ERROR_PROCESSING_CREATE:"Error in the process of creating, please try again",
+    ERROR_PROCESSING_DELETE: "Error in the process of delete, please try again",
     ERROR_REFRESH_TOKEN_VALID: "Refresh token is not valid",
+    ERROR_CCCD_ALREADY_EXIT: "Error CCCD already exist",
 
     NOT_FOUND: "NOT FOUND",
     NOT_FOUND_USERNAME: "Not found username",

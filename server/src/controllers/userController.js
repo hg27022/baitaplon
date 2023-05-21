@@ -5,7 +5,7 @@ import userService from "../services/userService.js";
 
 const getAllUser = async (req, res) => {
   const { pageIndex, pageSize, search } = req.body;
-  let data = userService.getAllUser(pageSize);
+  let data = await userService.getAllUser(pageSize);
   return res.status(Constant.HttpStatusCode.OK).json(data);
 };
 
@@ -34,7 +34,7 @@ const getUserById = async (req, res) => {
       .json({ errors: errors.array() });
   }
   const id = req?.params?.id ?? "";
-  const user = userService.getUserById(id);
+  const user = await userService.getUserById(id);
   if (!user) {
     return res
       .status(Constant.HttpStatusCode.FORBIDDEN)
@@ -45,7 +45,7 @@ const getUserById = async (req, res) => {
 
 const deleteUserById = async (req, res) => {
   const id = req?.params?.id ?? "";
-  const user = userService.getUserById(id);
+  const user = await userService.getUserById(id);
   if (!user) {
     return res
       .status(Constant.HttpStatusCode.FORBIDDEN)

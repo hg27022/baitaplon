@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import NoPage from "./pages/nopage/NoPage";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/user/Login";
+import Study from "./pages/study/Study";
 import { createTheme } from "@mui/material/styles";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { themeSettings } from "./theme";
@@ -24,7 +25,7 @@ function App() {
             <Route path={"/dashboard"} element={<Dashboard />} />
             <Route path={"/infomation"} element={<Infomation />} />
             <Route path={"/scholarship"} element={<Login />} />
-            <Route path={"/study"} element={<Login />} />
+            <Route path={"/study"} element={<Study />} />
             <Route path={"/graduate"} element={<Login />} />
             <Route path={"/practise"} element={<Login />} />
             <Route path={"/discipline"} element={<Login />} />

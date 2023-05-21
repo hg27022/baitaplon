@@ -1,9 +1,9 @@
-import React, {useState, useEffect, useMemo} from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./style.scss";
-import {checkUserLogin} from "./userService.js";
-import {useDispatch} from "react-redux";
+import { checkUserLogin } from "./UserService.js";
+import { useDispatch } from "react-redux";
 // import {setToken} from "../../store/action";
-import {setToken} from "../../store/index";
+import { setToken } from "../../store/index";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -15,10 +15,10 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import CopyRight from "../../components/copy-right/CopyRight";
-import {Link} from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope, faLock} from "@fortawesome/free-solid-svg-icons";
-import {useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 import LoaderPage from "../../components/loader-page/Loader";
 
 export default function Login() {
@@ -37,7 +37,7 @@ export default function Login() {
         e.preventDefault();
         if (username.trim().length > 5 && password.trim().length > 8) {
             const res = await checkUserLogin(user);
-            if (res) {
+            if (res.status === 200) {
                 setSingIn(true);
                 setTimeout(function () {
                     let loading = document.querySelector(".loading-page");
@@ -45,7 +45,7 @@ export default function Login() {
                     dispatch(setToken(res.data.accessToken));
                     window.localStorage.setItem("access_token", res.data.accessToken);
                     navigate("/dashboard");
-                }, 2000);
+                }, 500);
             } else {
                 let messInvalid = document.querySelector(".mess-notify");
                 messInvalid.innerHTML = "Invalid username or password";
@@ -67,8 +67,8 @@ export default function Login() {
                     alignItems: "center",
                 }}
             >
-                <Avatar sx={{m: 1, bgcolor: "secondary.main"}}>
-                    <LockOutlinedIcon/>
+                <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+                    <LockOutlinedIcon />
                 </Avatar>
                 <Typography component="h1" variant="h4">
                     Sign in
@@ -78,18 +78,18 @@ export default function Login() {
                     component="form"
                     onSubmit={handleSubmit}
                     noValidate
-                    sx={{mt: 1, width: 400}}
+                    sx={{ mt: 1, width: 400 }}
                 >
                     <Grid
                         container
                         spacing={1}
-                        sx={{mt: 1}}
+                        sx={{ mt: 1 }}
                         justify="center"
                         alignItems="center"
                         alignContent="center"
                     >
                         <Grid item xs={2}>
-                            <FontAwesomeIcon size={"2x"} icon={faEnvelope}/>
+                            <FontAwesomeIcon size={"2x"} icon={faEnvelope} />
                         </Grid>
                         <Grid item xs={10}>
                             <TextField
@@ -111,13 +111,13 @@ export default function Login() {
                     <Grid
                         container
                         spacing={2}
-                        sx={{mt: 1}}
+                        sx={{ mt: 1 }}
                         justify="center"
                         alignItems="center"
                         alignContent="center"
                     >
                         <Grid item xs={2}>
-                            <FontAwesomeIcon size={"2x"} icon={faLock}/>
+                            <FontAwesomeIcon size={"2x"} icon={faLock} />
                         </Grid>
                         <Grid item xs={10}>
                             <TextField
@@ -136,14 +136,14 @@ export default function Login() {
                         </Grid>
                     </Grid>
                     <FormControlLabel
-                        control={<Checkbox value="remember" color="primary"/>}
+                        control={<Checkbox value="remember" color="primary" />}
                         label="Remember me"
                     />
                     <Button
                         type="submit"
                         fullWidth
                         variant="contained"
-                        sx={{mt: 3, mb: 2}}
+                        sx={{ mt: 3, mb: 2 }}
                     >
                         Log in
                     </Button>
@@ -157,7 +157,7 @@ export default function Login() {
                     </Grid>
                 </Box>
             </Box>
-            <CopyRight sx={{mt: 8, mb: 4}}/>
+            <CopyRight sx={{ mt: 8, mb: 4 }} />
         </Container>
     );
 }

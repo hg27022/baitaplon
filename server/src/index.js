@@ -9,6 +9,7 @@ import viewEngine from "./config/viewEngine.js";
 import {connect} from "./config/connect.js";
 import userRoute from "./routes/userRoute.js";
 import authRoute from "./routes/authRoute.js";
+import studentRoute from "./routes/studentRoute.js"
 import Constant from "./common/constant.js";
 
 //  config app
@@ -24,9 +25,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 viewEngine(app);
+
 //  router
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
+app.use("/api/student", studentRoute);
 
 connect();
 

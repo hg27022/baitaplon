@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     point: DataTypes.FLOAT
   }, {
     sequelize,
-    modelName: 'Result',
+    modelName: 'result',
   });
   return Result;
 };
