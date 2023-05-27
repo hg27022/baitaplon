@@ -26,7 +26,7 @@ export function AddStudentDialog(setOpenPopup) {
     }
 
     const handleChange = (e) => {
-        setStudent({ ...student, [e.target.name]: e.target.value.trim() });
+        setStudent({ ...student, [e.target.name]: e.target.value });
     };
 
     return (
@@ -41,7 +41,7 @@ export function AddStudentDialog(setOpenPopup) {
                 <Box sx={{ display: "flex", flexDirection: "column", width: "40%" }}>
                     <FormLabel>Họ tên</FormLabel>
                     <TextField
-                        type="text" name='fullName' value={student.fullName.trim()} onChange={handleChange}
+                        type="text" name='fullName' value={student.fullName} onChange={handleChange}
                         placeholder="Nhập họ và tên" onBlur={handleChange} required>
                     </TextField>
                 </Box>
@@ -52,14 +52,14 @@ export function AddStudentDialog(setOpenPopup) {
                         options={gender.map((option) => option.label)}
                         renderInput={(params) =>
                             <TextField name='gender' onBlur={handleChange}
-                                value={student.gender.trim()} onChange={handleChange} required {...params} />}
+                                value={student.gender} onChange={handleChange} required {...params} />}
                     />
                 </Box>
 
                 <Box sx={{ display: "flex", flexDirection: "column", width: "40%" }}>
                     <FormLabel>Ngày sinh</FormLabel>
                     <TextField
-                        type="date" name='dateOfBirth' required value={student.dateOfBirth.trim()}
+                        type="date" name='dateOfBirth' required value={student.dateOfBirth}
                         onChange={handleChange} onBlur={handleChange}>
                     </TextField>
                 </Box>
@@ -69,7 +69,7 @@ export function AddStudentDialog(setOpenPopup) {
                     <TextField
                         type="text"
                         name='cccd'
-                        value={student.cccd.trim()}
+                        value={student.cccd}
                         onChange={handleChange}
                         onBlur={handleChange}
                         helperText=""
@@ -93,7 +93,7 @@ export function AddStudentDialog(setOpenPopup) {
                         options={nation.map((option) => option.name)}
                         renderInput={(params) =>
                             <TextField name='nation' onBlur={handleChange}
-                                value={student.nation.trim()} onChange={handleChange} required {...params} />}
+                                value={student.nation} onChange={handleChange} required {...params} />}
                     />
                 </Box>
 
