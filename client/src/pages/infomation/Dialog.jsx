@@ -10,14 +10,7 @@ import moment from 'moment/moment.js';
 
 export function AddStudentDialog(setOpenPopup) {
     const [loading, setLoading] = useState(false);
-    const [student, setStudent] = useState({
-        fullName: '',
-        gender: '',
-        dateOfBirth: '',
-        cccd: '',
-        province: '',
-        nation: ''
-    });
+    const [student, setStudent] = useState({});
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -28,7 +21,7 @@ export function AddStudentDialog(setOpenPopup) {
                 let loadpage = document.querySelector(".loading-page");
                 loadpage.innerHTML = "";
                 setOpenPopup(false);
-            }, 200);
+            }, 500);
         }
     }
 
@@ -130,7 +123,7 @@ export function ChangeStudentDialog(props, setOpenPopup) {
                 let loadpage = document.querySelector(".loading-page");
                 loadpage.innerHTML = "";
                 setOpenPopup(false);
-            }, 200);
+            }, 500);
 
         }
     }
@@ -228,7 +221,7 @@ export function DeleteStudentDialog(props, setOpenPopup) {
         if (res.status === 200) {
             setTimeout(function () {
                 setOpenPopup(false);
-            }, 200);
+            }, 500);
         }
     }
 

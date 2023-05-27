@@ -15,8 +15,10 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import Sidebar from "../../components/sidebar/Sidebar";
-import {dataSidebar}  from "../../common/constants";
+import { dataSidebar } from "../../common/constants";
 import Button from "@mui/material/Button";
+import Popup from '../popup/Popup';
+import { ProfileDialog } from './Dialog';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -64,6 +66,8 @@ export default function Header() {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const [openPopup, setOpenPopup] = React.useState(false);
+  const [action, setAction] = React.useState('');
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -99,7 +103,7 @@ export default function Header() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={() => {setOpenPopup(true), setAction('profile')}}>Profile</MenuItem>
       <MenuItem
         onClick={() => {
           handleMenuClose,
@@ -235,6 +239,7 @@ export default function Header() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      {action === 'profile' ? <Popup title="Sửa thông tin" children={() => ProfileDialog(setOpenPopup)} openPopup={openPopup} setOpenPopup={setOpenPopup} /> : null}
     </Box>
   );
 }

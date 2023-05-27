@@ -44,6 +44,7 @@ export default function Login() {
                     loading.innerHTML = "";
                     dispatch(setToken(res.data.accessToken));
                     window.localStorage.setItem("access_token", res.data.accessToken);
+                    window.localStorage.setItem("user_id", res.data.user.id);
                     navigate("/dashboard");
                 }, 500);
             } else {

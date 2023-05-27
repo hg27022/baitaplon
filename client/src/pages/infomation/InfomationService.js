@@ -9,7 +9,7 @@ export const getAllStudent = () => {
 };
 
 export const getStudentById = (id) => {
-  let url = ConstantList.API_ENDPOINT + API_PATH_STUDENT + '/' + + id;
+  let url = ConstantList.API_ENDPOINT + API_PATH_STUDENT + '/' + id;
   return axios.get(url, ConstantList.CONFIG);
 };
 
